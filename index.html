@@ -11,8 +11,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-  <!-- Custom styles -->
-  <!-- <link rel="stylesheet" href="styles.css"/> -->
 
   <script>
     tailwind.config = {
@@ -40,7 +38,7 @@
 
       <div class="hidden md:flex items-center gap-8 text-base font-medium">
         <a href="#about" class="hover:text-accent transition">About</a>
-        <a href="#experience" class="hover:text-accent transition">Experience</a>
+        <!-- <a href="#experience" class="hover:text-accent transition">Experience</a> -->
         <a href="#skills" class="hover:text-accent transition">Skills</a>
         <a href="#projects" class="hover:text-accent transition">Projects</a>
         <a href="#certifications" class="hover:text-accent transition">Certifications</a>
@@ -51,28 +49,15 @@
         <button id="theme-toggle" class="p-2.5 rounded-xl hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50 transition">
           <i class="fa-solid fa-sun text-lg"></i>
         </button>
-        <a href="resume.pdf" download class="hidden sm:flex px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium items-center gap-2 hover:shadow-lg transition">
-          <i class="fa-solid fa-download"></i> Resume
+        <!-- Resume button always visible now (replaces hamburger on mobile) -->
+        <a href="resume.pdf" download 
+           class="px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium flex items-center gap-2 hover:shadow-lg transition text-sm sm:text-base">
+           Resume<i class="fa-solid fa-download"></i>
         </a>
-        <button id="menu-btn" class="md:hidden p-2 rounded-xl hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50">
-          <i class="fa-solid fa-bars text-2xl"></i>
-        </button>
       </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-zinc-50/95 dark:bg-zinc-950/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-10 text-2xl font-medium">
-      <button id="close-menu" class="absolute top-6 right-6 text-4xl">&times;</button>
-      <a href="#about" class="hover:text-accent">About</a>
-      <a href="#experience" class="hover:text-accent">Experience</a>
-      <a href="#skills" class="hover:text-accent">Skills</a>
-      <a href="#projects" class="hover:text-accent">Projects</a>
-      <a href="#certifications" class="hover:text-accent">Certifications</a>
-      <a href="#contact" class="hover:text-accent">Contact</a>
-      <a href="resume.pdf" download class="mt-8 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl flex items-center gap-3">
-        <i class="fa-solid fa-download"></i> Resume
-      </a>
-    </div>
+    <!-- Removed entire mobile menu block because hamburger is gone -->
   </nav>
 
   <!-- Hero -->
@@ -108,8 +93,9 @@
           <div class="flex items-center gap-2">
             <i class="fa-solid fa-location-dot text-accent"></i> Agra, India
           </div>
-          <a href="mailto:itsrachitjain99@gmail.com" class="hover:text-accent flex items-center gap-2">
-            <i class="fa-solid fa-envelope"></i> itsrachitjain99@gmail.com
+          <a href="mailto:itsrachitjain99@gmail.com?subject=Data%20Analyst%20Opportunity&body=Hello%20Rachit,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20Data%20Analyst%20opportunity.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20discussion.%0A%0AThank%20you,"
+            class="hover:text-accent flex items-center gap-2">
+               <i class="fa-solid fa-envelope"></i> itsrachitjain99@gmail.com
           </a>
         </div>
       </div>
@@ -136,8 +122,7 @@
         <div class="lg:col-span-7 space-y-6">
           <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">About Me</h2>
           <div class="prose dark:prose-invert text-lg leading-relaxed">
-            <p>Data Analyst fresher with hands-on experience in SQL, Advanced Excel, Python and Power BI. Skilled in data cleaning, EDA, KPI & MIS reporting, ETL processes, dashboard automation, and business performance analysis.</p>
-            <p>Experienced in e-commerce and inventory analytics. Passionate about transforming raw data into clear, actionable insights that drive real business decisions.</p>
+            <p>Results-driven Data Analyst with experience analyzing 200K+ transactional and customer datasets across inventory and customer analytics projects using PostgreSQL, Python, Advanced Excel, and Power BI. Strong expertise in SQL analytics, data modeling, KPI engineering, RFM segmentation, cohort analysis, and dashboard automation. Improved reporting efficiency by 45%, optimized SQL query performance by 25%, and delivered actionable insights that supported data-driven business decisions.</p>
           </div>
         </div>
         <div class="lg:col-span-5">
@@ -162,18 +147,20 @@
     </div>
   </section>
 
+  <!-- Experience, Skills, Projects, Certifications, Contact, Footer remain exactly the same -->
+
   <!-- Experience -->
-  <!-- <section id="experience" class="py-20 lg:py-28 bg-zinc-50 dark:bg-zinc-950"> -->
-    <!-- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- <section id="experience" class="py-20 lg:py-28 bg-zinc-50 dark:bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-center mb-4">Experience</h2>
       <p class="text-center text-zinc-500 dark:text-zinc-400 mb-12 max-w-2xl mx-auto text-lg">
         Internships, projects & practical exposure in data analytics
       </p>
 
-      <div class="space-y-12 lg:space-y-16">
+      <div class="space-y-12 lg:space-y-16"> -->
 
-        <!-- Experience Item 1 
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <!-- Experience Item 1 -->
+        <!-- <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div class="lg:col-span-4">
             <div class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm border border-zinc-200 dark:border-zinc-700">
               <h3 class="text-xl sm:text-2xl font-bold">Data Analyst Intern</h3>
@@ -211,7 +198,7 @@
         </div> -->
 
         <!-- Experience Item 2 -->
-        <!-- <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start"> 
+        <!-- <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div class="lg:col-span-4">
             <div class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm border border-zinc-200 dark:border-zinc-700">
               <h3 class="text-xl sm:text-2xl font-bold">Data Analytics Trainee</h3>
@@ -304,7 +291,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-center mb-4">Featured Projects</h2>
       <p class="text-center text-zinc-500 dark:text-zinc-400 mb-10 max-w-2xl mx-auto text-lg">
-        Real-world analytics projects showcasing data cleaning, visualization, insights & impact
+      Data-driven analytics projects focused on transforming raw data into meaningful insights and measurable business impact.
       </p>
 
       <div class="relative">
@@ -402,7 +389,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3 class="font-semibold text-lg sm:text-xl mb-1">IIT Bombay Python</h3>
               <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">Python • IIT Bombay • 2025</p>
-              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow"></p>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow">Certificate of completion for Python 3.4.3 Training issued by the Spoken Tutorial Project, IIT Bombay, recognizing successful exam qualification with 75% score.</p>
               <a href="/Python_IIT_Bombay.pdf" 
                  download="Rachit-Jain-Python-IIT-Bombay.pdf"
                  class="mt-auto py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg transition">
@@ -420,8 +407,8 @@
             </div>
             <div class="p-6 flex flex-col flex-grow">
               <h3 class="font-semibold text-lg sm:text-xl mb-1">Power BI Workshop</h3>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">OfficeMaster • 2025</p>
-              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow">Practical DAX, modeling, reports & real-time dashboards.</p>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">OfficeMaster • 2026</p>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow">Certificate of completion for the Power BI Workshop issued by OfficeMaster, recognizing expertise in building AI-powered interactive dashboards</p>
               <a href="/Power_Bi_OfficeMaster.pdf" 
                  download="Rachit-Jain-Power-BI-Workshop.pdf"
                  class="mt-auto py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg transition">
@@ -438,9 +425,9 @@
                    class="max-h-full w-auto shadow-lg rounded hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-semibold text-lg sm:text-xl mb-1">Advanced Excel for Business Analytics</h3>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">Coursera • 2025</p>
-              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow">Power Query, Power Pivot, dynamic dashboards & automation.</p>
+              <h3 class="font-semibold text-lg sm:text-xl mb-1">Microsoft Excel With A.I</h3>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">SkillCourse • 2026</p>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow">Certificate of completion for Microsoft Excel with A.I Masterclass issued by Skill Course (ISO 9001:2015 certified)</p>
               <a href="/Excel-Skill-Course.pdf" 
                  download="Rachit-Jain-Advanced-Excel-Business-Analytics.pdf"
                  class="mt-auto py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg transition">
@@ -469,7 +456,11 @@
         </button>
       </form>
       <div class="mt-10 text-center">
-        <a href="mailto:itsrachitjain99@gmail.com" class="text-xl font-medium hover:text-accent transition">itsrachitjain99@gmail.com</a>
+        <a href="mailto:itsrachitjain99@gmail.com?subject=Data%20Analyst%20Opportunity&body=Hello%20Rachit,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20Data%20Analyst%20opportunity.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20discussion.%0A%0AThank%20you,"
+            class="text-xl font-medium hover:text-accent transition">
+                <i class="fa-solid fa-envelope"></i> Rachit Jain
+</a>
+
       </div>
     </div>
   </section>
@@ -481,7 +472,7 @@
         <a href="https://linkedin.com/in/rachit-jain99" target="_blank"><i class="fa-brands fa-linkedin text-4xl hover:text-white transition"></i></a>
         <a href="https://github.com/itsrachitjain" target="_blank"><i class="fa-brands fa-github text-4xl hover:text-white transition"></i></a>
       </div>
-      <p class="text-sm">© 2026 Rachit Jain. Built with passion for data.</p>
+      <p class="text-sm"><b>Rachit Jain</b><br><br>Transforming Data into Actionable Insights</p>
     </div>
   </footer>
 
@@ -496,14 +487,6 @@
         ? '<i class="fa-solid fa-moon text-lg"></i>' 
         : '<i class="fa-solid fa-sun text-lg"></i>';
     });
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-menu');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-    closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
 
     // Typing animation
     const texts = ["Data Analyst", "Power BI Specialist", "SQL Proficient", "Python Enthusiast"];
@@ -540,9 +523,7 @@
 
     setTimeout(() => type(), 800);
 
-    // ────────────────────────────────────────────────
     // Horizontal Projects Carousel
-    // ────────────────────────────────────────────────
     const scroller   = document.getElementById('projects-scroller');
     const prevBtn    = document.getElementById('prev-btn');
     const nextBtn    = document.getElementById('next-btn');
@@ -571,9 +552,7 @@
       setTimeout(updateArrowState, 400);
     }
 
-    // ────────────────────────────────────────────────
     // Horizontal Certifications Carousel
-    // ────────────────────────────────────────────────
     const certScroller   = document.getElementById('cert-scroller');
     const certPrevBtn    = document.getElementById('cert-prev-btn');
     const certNextBtn    = document.getElementById('cert-next-btn');
@@ -651,6 +630,4 @@
   </style>
 
 </body>
-
 </html>
-
