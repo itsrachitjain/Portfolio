@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Rachit Jain - Data Analyst fresher | SQL, Python, Power BI, Excel, Tableau – turning data into business insights"/>
+  <meta name="keywords" content="Data Analyst, SQL, Python, Power BI, Excel, Tableau, ETL, Dashboard, Agra, India"/>
+  <title>Rachit Jain | Data Analyst</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <!-- Custom styles -->
+  <!-- <link rel="stylesheet" href="styles.css"/> -->
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f46e5',
+            accent: '#7c3aed'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">RJ</div>
+        <span class="font-bold text-xl sm:text-2xl tracking-tight">Rachit Jain</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-base font-medium">
+        <a href="#about" class="hover:text-accent transition">About</a>
+        <a href="#experience" class="hover:text-accent transition">Experience</a>
+        <a href="#skills" class="hover:text-accent transition">Skills</a>
+        <a href="#projects" class="hover:text-accent transition">Projects</a>
+        <a href="#certifications" class="hover:text-accent transition">Certifications</a>
+        <a href="#contact" class="hover:text-accent transition">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="p-2.5 rounded-xl hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50 transition">
+          <i class="fa-solid fa-sun text-lg"></i>
+        </button>
+        <a href="resume.pdf" download class="hidden sm:flex px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium items-center gap-2 hover:shadow-lg transition">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+        <button id="menu-btn" class="md:hidden p-2 rounded-xl hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-zinc-50/95 dark:bg-zinc-950/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-10 text-2xl font-medium">
+      <button id="close-menu" class="absolute top-6 right-6 text-4xl">&times;</button>
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#experience" class="hover:text-accent">Experience</a>
+      <a href="#skills" class="hover:text-accent">Skills</a>
+      <a href="#projects" class="hover:text-accent">Projects</a>
+      <a href="#certifications" class="hover:text-accent">Certifications</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+      <a href="resume.pdf" download class="mt-8 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl flex items-center gap-3">
+        <i class="fa-solid fa-download"></i> Resume
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="min-h-screen flex items-center pt-20 pb-12 bg-gradient-to-br from-zinc-100 via-white to-indigo-50 dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div class="space-y-6">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 dark:bg-zinc-900/70 rounded-full border border-zinc-200 dark:border-zinc-700 text-sm font-medium">
+          <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
+          Open to opportunities
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none">Rachit Jain</h1>
+
+        <div class="h-14">
+          <span id="typed" class="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"></span>
+          <span class="text-3xl sm:text-4xl lg:text-5xl font-medium text-zinc-400 dark:text-zinc-500 cursor">|</span>
+        </div>
+
+        <p class="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 max-w-lg">
+          Turning raw numbers into clear business stories with SQL, Python, Power BI, Excel & more.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="px-7 py-3.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-semibold flex items-center gap-2 hover:shadow-xl transition">
+            View Projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="px-7 py-3.5 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl font-semibold transition">
+            Let's Connect
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-6 text-sm pt-4">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-accent"></i> Agra, India
+          </div>
+          <a href="mailto:itsrachitjain99@gmail.com" class="hover:text-accent flex items-center gap-2">
+            <i class="fa-solid fa-envelope"></i> itsrachitjain99@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center mt-10 md:mt-0">
+        <div class="w-64 sm:w-80 lg:w-96 aspect-square rounded-3xl overflow-hidden shadow-2xl">
+          <img src="Rachit.jpeg" alt="Rachit Jain" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 -right-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-5 flex items-center gap-4">
+          <div class="text-4xl">📊</div>
+          <div>
+            <div class="font-bold text-xl">BCA 79%</div>
+            <div class="text-xs text-zinc-500">Teerthanker Mahaveer University</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-20 lg:py-28 bg-white dark:bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">About Me</h2>
+          <div class="prose dark:prose-invert text-lg leading-relaxed">
+            <p>Data Analyst fresher with hands-on experience in SQL, Advanced Excel, Python and Power BI. Skilled in data cleaning, EDA, KPI & MIS reporting, ETL processes, dashboard automation, and business performance analysis.</p>
+            <p>Experienced in e-commerce and inventory analytics. Passionate about transforming raw data into clear, actionable insights that drive real business decisions.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="bg-zinc-100 dark:bg-zinc-800 rounded-3xl p-8">
+            <div class="grid grid-cols-2 gap-8 mb-8 text-center">
+              <div>
+                <div class="text-4xl font-bold text-primary">2025</div>
+                <div class="text-sm text-zinc-500">Graduated</div>
+              </div>
+              <div>
+                <div class="text-4xl font-bold">79%</div>
+                <div class="text-sm text-zinc-500">BCA</div>
+              </div>
+            </div>
+            <a href="https://linkedin.com/in/rachit-jain99" target="_blank" class="flex items-center justify-center gap-3 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-2xl py-4 font-medium transition">
+              <i class="fa-brands fa-linkedin text-2xl text-[#0A66C2]"></i>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 lg:py-28 bg-zinc-50 dark:bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-center mb-4">Experience</h2>
+      <p class="text-center text-zinc-500 dark:text-zinc-400 mb-12 max-w-2xl mx-auto text-lg">
+        Internships, projects & practical exposure in data analytics
+      </p>
+
+      <div class="space-y-12 lg:space-y-16">
+
+        <!-- Experience Item 1 -->
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div class="lg:col-span-4">
+            <div class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm border border-zinc-200 dark:border-zinc-700">
+              <h3 class="text-xl sm:text-2xl font-bold">Data Analyst Intern</h3>
+              <p class="text-accent font-medium mt-1">Company / Startup Name</p>
+              <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-3">
+                <span class="inline-flex items-center gap-1.5">
+                  <i class="fa-solid fa-calendar-days text-base"></i>
+                  June 2025 – August 2025
+                </span>
+                <span class="mx-2">•</span>
+                <span class="inline-flex items-center gap-1.5">
+                  <i class="fa-solid fa-location-dot"></i> Remote / Agra
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 space-y-5">
+            <ul class="space-y-4 text-zinc-700 dark:text-zinc-300 text-lg leading-relaxed list-disc pl-6 marker:text-accent">
+              <li>Analyzed sales, inventory and customer data using SQL and Python (Pandas) for a mid-size e-commerce client</li>
+              <li>Built 8+ interactive Power BI dashboards tracking KPIs: revenue trends, stock turnover, return rates, customer retention</li>
+              <li>Identified 12–18% potential revenue leakage through pricing & discount pattern analysis</li>
+              <li>Automated weekly MIS reporting reducing manual effort by ~70%</li>
+              <li>Collaborated with marketing & operations team to translate data findings into actionable recommendations</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">SQL</span>
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">Power BI</span>
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">Python</span>
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">Excel</span>
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">ETL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div class="lg:col-span-4">
+            <div class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm border border-zinc-200 dark:border-zinc-700">
+              <h3 class="text-xl sm:text-2xl font-bold">Data Analytics Trainee</h3>
+              <p class="text-accent font-medium mt-1">Organization / Institute Name</p>
+              <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-3">
+                <span class="inline-flex items-center gap-1.5">
+                  <i class="fa-solid fa-calendar-days text-base"></i>
+                  Jan 2025 – April 2025
+                </span>
+                <span class="mx-2">•</span>
+                <span class="inline-flex items-center gap-1.5">
+                  <i class="fa-solid fa-location-dot"></i> Remote
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 space-y-5">
+            <ul class="space-y-4 text-zinc-700 dark:text-zinc-300 text-lg leading-relaxed list-disc pl-6 marker:text-accent">
+              <li>Performed end-to-end analysis on retail / e-commerce datasets (cleaning, EDA, visualization)</li>
+              <li>Created customer segmentation models using RFM analysis in Python</li>
+              <li>Developed 5+ Power BI & Tableau reports presented to mentors & peers</li>
+              <li>Learned & implemented advanced SQL concepts: window functions, CTEs, dynamic pivoting</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">Python</span>
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">SQL</span>
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">Power BI</span>
+              <span class="px-3 py-1 text-sm bg-zinc-200 dark:bg-zinc-700 rounded-full">Tableau</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 lg:py-28 bg-zinc-100 dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-center mb-16">Technical Toolkit</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-brands fa-python text-5xl text-yellow-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Python</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-database text-5xl text-blue-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">SQL</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-file-excel text-5xl text-emerald-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Advanced Excel</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-chart-pie text-5xl text-violet-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Power BI</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-chart-line text-5xl text-orange-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Tableau</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-cubes text-5xl text-cyan-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Pandas & NumPy</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-calculator text-5xl text-rose-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Statistics</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-brands fa-git-alt text-5xl text-orange-600 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Git & GitHub</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-chart-bar text-5xl text-indigo-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Data Visualization</h3>
+        </div>
+        <div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 sm:p-8 hover:-translate-y-2 transition text-center">
+          <i class="fa-solid fa-gauge-high text-5xl text-teal-500 mb-4 block"></i>
+          <h3 class="font-semibold text-xl">Looker Studio</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 lg:py-28 bg-white dark:bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-center mb-4">Featured Projects</h2>
+      <p class="text-center text-zinc-500 dark:text-zinc-400 mb-10 max-w-2xl mx-auto text-lg">
+        Real-world analytics projects showcasing data cleaning, visualization, insights & impact
+      </p>
+
+      <div class="relative">
+        <button id="prev-btn" class="absolute -left-2 sm:-left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-lg rounded-full shadow-xl hover:bg-white dark:hover:bg-zinc-800 transition disabled:opacity-40 disabled:cursor-not-allowed border border-zinc-200 dark:border-zinc-700">
+          <i class="fa-solid fa-chevron-left text-lg sm:text-xl text-zinc-700 dark:text-zinc-300"></i>
+        </button>
+
+        <button id="next-btn" class="absolute -right-2 sm:-right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-lg rounded-full shadow-xl hover:bg-white dark:hover:bg-zinc-800 transition disabled:opacity-40 disabled:cursor-not-allowed border border-zinc-200 dark:border-zinc-700">
+          <i class="fa-solid fa-chevron-right text-lg sm:text-xl text-zinc-700 dark:text-zinc-300"></i>
+        </button>
+
+        <div id="projects-scroller" class="overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth flex gap-5 sm:gap-6 lg:gap-8 pb-6 -mx-1 px-1 scroll-pl-4 scroll-pr-4">
+          
+          <!-- Project 1 -->
+          <div class="group bg-zinc-50 dark:bg-zinc-800 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex-shrink-0 w-[85vw] sm:w-80 lg:w-96 snap-center">
+            <div class="h-44 sm:h-48 bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-5xl sm:text-6xl">📈</div>
+            <div class="p-5 sm:p-6">
+              <h3 class="font-semibold text-lg sm:text-xl mb-2">Revenue & Business Performance Analysis</h3>
+              <p class="text-zinc-600 dark:text-zinc-400 text-sm mb-4">Analyzed and transformed 11K records using PostgreSQL, developed interactive Power BI dashboards for performance tracking, and delivered data-driven insights to support strategic decision-making.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">Excel</span>
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">PostgreSQL</span>
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">Power BI</span>
+              </div>
+              <a href="https://github.com/itsrachitjain/Revenue-Business-Analytics" target="_blank" class="text-sm font-medium hover:text-accent flex items-center gap-2">
+                GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="group bg-zinc-50 dark:bg-zinc-800 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex-shrink-0 w-[85vw] sm:w-80 lg:w-96 snap-center">
+            <div class="h-44 sm:h-48 bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center text-5xl sm:text-6xl">👥</div>
+            <div class="p-5 sm:p-6">
+              <h3 class="font-semibold text-lg sm:text-xl mb-2">Inventory Optimization & Demand Analysis</h3>
+              <p class="text-zinc-600 dark:text-zinc-400 text-sm mb-4">Analyzed 250K SKU records using PostgreSQL. Identified demand trends, stock inefficiencies, and supplier performance gaps. Leveraged advanced SQL and automated reporting for data-driven insights.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">Excel</span>
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">PostgreSQL</span>
+              </div>
+              <a href="https://github.com/itsrachitjain/Inventory-Optimization-Demand-Analysis.git" target="_blank" class="text-sm font-medium hover:text-accent flex items-center gap-2">
+                GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="group bg-zinc-50 dark:bg-zinc-800 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex-shrink-0 w-[85vw] sm:w-80 lg:w-96 snap-center">
+            <div class="h-44 sm:h-48 bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center text-5xl sm:text-6xl">📦</div>
+            <div class="p-5 sm:p-6">
+              <h3 class="font-semibold text-lg sm:text-xl mb-2">Customer Segmentation & Retention Analysis</h3>
+              <p class="text-zinc-600 dark:text-zinc-400 text-sm mb-4">Analyzed 600K transactions and 200K customers. Applied RFM and cohort analysis to identify high-value and at-risk segments. Developed Python and Power BI dashboards for actionable insights.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">Excel</span>
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">Python</span>
+                <span class="px-3 py-1 text-xs bg-zinc-200 dark:bg-zinc-700 rounded-full">Power BI</span>
+              </div>
+              <a href="https://github.com/itsrachitjain/Customer-Segmentation-Retention-Analytics.git" target="_blank" class="text-sm font-medium hover:text-accent flex items-center gap-2">
+                GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="py-20 lg:py-28 bg-zinc-100 dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-center mb-4">Certifications</h2>
+      <p class="text-center text-zinc-500 dark:text-zinc-400 mb-10 max-w-2xl mx-auto text-lg">
+        Verified credentials showcasing foundational and tool-specific data analysis skills
+      </p>
+
+      <div class="relative">
+        <button id="cert-prev-btn" class="absolute -left-2 sm:-left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-lg rounded-full shadow-xl hover:bg-white dark:hover:bg-zinc-800 transition disabled:opacity-40 disabled:cursor-not-allowed border border-zinc-200 dark:border-zinc-700">
+          <i class="fa-solid fa-chevron-left text-lg sm:text-xl text-zinc-700 dark:text-zinc-300"></i>
+        </button>
+
+        <button id="cert-next-btn" class="absolute -right-2 sm:-right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white/90 dark:bg-zinc-900/90 backdrop-blur-lg rounded-full shadow-xl hover:bg-white dark:hover:bg-zinc-800 transition disabled:opacity-40 disabled:cursor-not-allowed border border-zinc-200 dark:border-zinc-700">
+          <i class="fa-solid fa-chevron-right text-lg sm:text-xl text-zinc-700 dark:text-zinc-300"></i>
+        </button>
+
+        <div id="cert-scroller" class="overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth flex gap-5 sm:gap-6 lg:gap-8 pb-6 -mx-1 px-1 scroll-pl-4 scroll-pr-4">
+
+          <!-- Python IIT Bombay -->
+          <div class="group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex-shrink-0 w-[85vw] sm:w-80 lg:w-96 snap-center flex flex-col">
+            <div class="h-56 bg-zinc-50 dark:bg-zinc-800 p-4 flex items-center justify-center border-b border-zinc-200 dark:border-zinc-700">
+              <img src="/Certificates/IMAGES/Python_IIT_Bombay.jpg" 
+                   alt="Python IIT Bombay Certificate"
+                   class="max-h-full w-auto shadow-lg rounded hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="font-semibold text-lg sm:text-xl mb-1">IIT Bombay Python</h3>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">Python • IIT Bombay • 2025</p>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow"></p>
+              <a href="/Certificates/PDF/Python_IIT_Bombay.pdf" 
+                 download="Rachit-Jain-Python-IIT-Bombay.pdf"
+                 class="mt-auto py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg transition">
+                <i class="fa-solid fa-download"></i> Download Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Power BI Workshop -->
+          <div class="group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex-shrink-0 w-[85vw] sm:w-80 lg:w-96 snap-center flex flex-col">
+            <div class="h-56 bg-zinc-50 dark:bg-zinc-800 p-4 flex items-center justify-center border-b border-zinc-200 dark:border-zinc-700">
+              <img src="/Certificates/IMAGES/Power_Bi_OfficeMaster.jpg" 
+                   alt="Power BI Workshop"
+                   class="max-h-full w-auto shadow-lg rounded hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="font-semibold text-lg sm:text-xl mb-1">Power BI Workshop</h3>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">OfficeMaster • 2025</p>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow">Practical DAX, modeling, reports & real-time dashboards.</p>
+              <a href="/Certificates/PDF/Power_Bi_OfficeMaster.pdf" 
+                 download="Rachit-Jain-Power-BI-Workshop.pdf"
+                 class="mt-auto py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg transition">
+                <i class="fa-solid fa-download"></i> Download Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Advanced Excel -->
+          <div class="group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex-shrink-0 w-[85vw] sm:w-80 lg:w-96 snap-center flex flex-col">
+            <div class="h-56 bg-zinc-50 dark:bg-zinc-800 p-4 flex items-center justify-center border-b border-zinc-200 dark:border-zinc-700">
+              <img src="/Certificates/IMAGES/Excel-Skill-Course.png" 
+                   alt="Advanced Excel for Business Analytics"
+                   class="max-h-full w-auto shadow-lg rounded hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="font-semibold text-lg sm:text-xl mb-1">Advanced Excel for Business Analytics</h3>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-3">Coursera • 2025</p>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6 flex-grow">Power Query, Power Pivot, dynamic dashboards & automation.</p>
+              <a href="/Certificates/PDF/Excel-Skill-Course.pdf" 
+                 download="Rachit-Jain-Advanced-Excel-Business-Analytics.pdf"
+                 class="mt-auto py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:shadow-lg transition">
+                <i class="fa-solid fa-download"></i> Download Certificate
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 lg:py-28 bg-white dark:bg-zinc-900">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-center mb-12">Let's Connect</h2>
+      <form id="contact-form" action="https://formspree.io/f/mykdeeza" method="POST" class="space-y-6 bg-zinc-50 dark:bg-zinc-800 rounded-3xl p-8">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <input type="text" placeholder="Your Name" name="name" class="bg-transparent border border-zinc-300 dark:border-zinc-600 focus:border-accent rounded-xl px-6 py-4 outline-none transition"/>
+          <input type="email" placeholder="Email Address" name="email" class="bg-transparent border border-zinc-300 dark:border-zinc-600 focus:border-accent rounded-xl px-6 py-4 outline-none transition"/>
+        </div>
+        <textarea name="message" placeholder="Your Message" rows="5" class="w-full bg-transparent border border-zinc-300 dark:border-zinc-600 focus:border-accent rounded-2xl px-6 py-4 outline-none transition"></textarea>
+        <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-semibold hover:shadow-xl transition">
+          Send Message
+        </button>
+      </form>
+      <div class="mt-10 text-center">
+        <a href="mailto:itsrachitjain99@gmail.com" class="text-xl font-medium hover:text-accent transition">itsrachitjain99@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 text-zinc-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="flex justify-center gap-10 mb-8">
+        <a href="https://linkedin.com/in/rachit-jain99" target="_blank"><i class="fa-brands fa-linkedin text-4xl hover:text-white transition"></i></a>
+        <a href="https://github.com/itsrachitjain" target="_blank"><i class="fa-brands fa-github text-4xl hover:text-white transition"></i></a>
+      </div>
+      <p class="text-sm">© 2026 Rachit Jain. Built with passion for data.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    toggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      toggle.innerHTML = html.classList.contains('dark') 
+        ? '<i class="fa-solid fa-moon text-lg"></i>' 
+        : '<i class="fa-solid fa-sun text-lg"></i>';
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+    // Typing animation
+    const texts = ["Data Analyst", "Power BI Specialist", "SQL Proficient", "Python Enthusiast"];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+
+    const typedElement = document.getElementById('typed');
+
+    function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      typedElement.textContent = letter;
+      if (letter.length === currentText.length) {
+        setTimeout(erase, 1800);
+      } else {
+        setTimeout(type, 80);
+      }
+    }
+
+    function erase() {
+      letter = currentText.slice(0, --index);
+      typedElement.textContent = letter;
+      if (letter.length === 0) {
+        count++;
+        index = 0;
+        setTimeout(type, 400);
+      } else {
+        setTimeout(erase, 40);
+      }
+    }
+
+    setTimeout(() => type(), 800);
+
+    // ────────────────────────────────────────────────
+    // Horizontal Projects Carousel
+    // ────────────────────────────────────────────────
+    const scroller   = document.getElementById('projects-scroller');
+    const prevBtn    = document.getElementById('prev-btn');
+    const nextBtn    = document.getElementById('next-btn');
+
+    if (scroller && prevBtn && nextBtn) {
+      function updateArrowState() {
+        const scrollLeft   = scroller.scrollLeft;
+        const maxScroll    = scroller.scrollWidth - scroller.clientWidth;
+        const atStart      = scrollLeft < 20;
+        const atEnd        = scrollLeft >= maxScroll - 20;
+
+        prevBtn.disabled = atStart;
+        nextBtn.disabled = atEnd;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        scroller.scrollBy({ left: - (scroller.clientWidth * 0.82), behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        scroller.scrollBy({ left:   (scroller.clientWidth * 0.82), behavior: 'smooth' });
+      });
+
+      scroller.addEventListener('scroll', updateArrowState);
+      window.addEventListener('resize', updateArrowState);
+      setTimeout(updateArrowState, 400);
+    }
+
+    // ────────────────────────────────────────────────
+    // Horizontal Certifications Carousel
+    // ────────────────────────────────────────────────
+    const certScroller   = document.getElementById('cert-scroller');
+    const certPrevBtn    = document.getElementById('cert-prev-btn');
+    const certNextBtn    = document.getElementById('cert-next-btn');
+
+    if (certScroller && certPrevBtn && certNextBtn) {
+      function updateCertArrowState() {
+        const scrollLeft   = certScroller.scrollLeft;
+        const maxScroll    = certScroller.scrollWidth - certScroller.clientWidth;
+        const atStart      = scrollLeft < 20;
+        const atEnd        = scrollLeft >= maxScroll - 20;
+
+        certPrevBtn.disabled = atStart;
+        certNextBtn.disabled = atEnd;
+      }
+
+      certPrevBtn.addEventListener('click', () => {
+        certScroller.scrollBy({ left: - (certScroller.clientWidth * 0.82), behavior: 'smooth' });
+      });
+
+      certNextBtn.addEventListener('click', () => {
+        certScroller.scrollBy({ left:   (certScroller.clientWidth * 0.82), behavior: 'smooth' });
+      });
+
+      certScroller.addEventListener('scroll', updateCertArrowState);
+      window.addEventListener('resize', updateCertArrowState);
+      setTimeout(updateCertArrowState, 400);
+    }
+  </script>
+
+  <style>
+    .cursor {
+      animation: blink 0.8s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    #projects-scroller {
+      scroll-padding-left: 1rem;
+      scroll-padding-right: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 3rem; }
+      .text-5xl { font-size: 2.5rem; }
+      section { padding-top: 5rem; padding-bottom: 5rem; }
+      #projects-scroller > div {
+        width: 85vw !important;
+      }
+    }
+
+    /* Experience tweaks */
+    #experience .marker {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1023px) {
+      #experience .grid {
+        grid-template-columns: 1fr;
+      }
+      #experience .lg\:col-span-4,
+      #experience .lg\:col-span-8 {
+        grid-column: span 1;
+      }
+    }
+  </style>
+
+</body>
+</html>
